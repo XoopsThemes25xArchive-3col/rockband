@@ -1,0 +1,68 @@
+<!DOCTYPE html PUBLIC '-//W3C//DTD XHTML 1.0 Transitional//EN' 'http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd'>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="<{$xoops_langcode}>" lang="<{$xoops_langcode}>">
+<head>
+<meta http-equiv="content-type" content="text/html; charset=<{$xoops_charset}>" />
+<meta http-equiv="content-language" content="<{$xoops_langcode}>" />
+<title><{$sitename}></title>
+<link rel="stylesheet" type="text/css" media="all" href="<{$xoops_url}>/xoops.css" />
+<link rel="stylesheet" type="text/css" media="all" href="<{$xoops_themecss}>" />
+
+<!--[if lt IE 7]>
+	<script type="text/javascript">
+		var IE7_PNG_SUFFIX=".*\/images\/.*.png";
+		var IE7_BOX_MODEL = true;
+	</script>
+	<script src="<{$xoops_imageurl}>ie7/ie7-standard-p.js" type="text/javascript"></script>
+<![endif]-->	
+
+</head>
+<body  class="<{$xoops_dirname}> theme-default">
+<{if $xoBlocks.canvas_left and $xoBlocks.canvas_right}><{assign var=columns_layout value='threecolumns-layout'}>
+<{elseif $xoBlocks.canvas_left}><{assign var=columns_layout value='leftcolumn-layout'}>
+<{elseif $xoBlocks.canvas_right}><{assign var=columns_layout value='rightcolumn-layout'}>
+<{/if}>
+<div id="xo-canvas"<{if $columns_layout}> class="<{$columns_layout}>"<{/if}>>
+	<div id="xo-canvas-header">
+		<div id="xo-main-logo">
+			<a href="<{xoAppUrl /}>"><img src="<{$xoops_imageurl}>images/logo.png" alt="<{$xoops_sitename}>" /></a>
+		</div>
+	<div id="xo-canvas-globalnav"></div>
+</div >
+	
+		<div id="xo-canvas-content">
+        <div class="site-closed">
+        <div class="site-closed-message">
+          <div align="center">
+            <p>&nbsp;</p>
+            <p><{$lang_siteclosemsg}></p>
+          </div>
+        </div>
+      <form action="<{$xoops_url}>/user.php" method="post">
+                     <div align="center">Username: 
+                       <input type="text" name="uname" size="12" value="" />
+                       <br />
+                     Password: 
+                     <input type="password" name="pass" size="12" />
+                     <br />
+                     <input type="hidden" name="xoops_redirect" value="<{$xoops_requesturi}>" />
+                     <input type="hidden" name="xoops_login" value="1" />
+                     <br />
+        
+                     <input type="submit" value="<{$lang_login}>" />
+                     </div>
+          </form>
+        </div>
+        </div>
+		
+	<div id="crn-bl"></div>
+	<div id="crn-br"></div>
+					<div id="xo-footer">
+						<div align="center">
+						  <p>&nbsp;</p>
+						  <p><{$xoops_footer}>	
+					      </p>
+					  </div>
+					</div>
+</div>
+</body>
+</html>

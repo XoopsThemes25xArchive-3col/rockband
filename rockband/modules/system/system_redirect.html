@@ -1,0 +1,51 @@
+<!DOCTYPE html PUBLIC '-//W3C//DTD XHTML 1.0 Transitional//EN' 'http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd'>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=<{$xoops_charset}>" />
+<meta http-equiv="Refresh" content="<{$time}>; url=<{$url}>" />
+<title><{$xoops_sitename}></title>
+<link rel="stylesheet" type="text/css" media="all" href="<{$xoops_themecss}>" />
+
+<!--[if lt IE 7]>
+	<script type="text/javascript">
+		var IE7_PNG_SUFFIX=".*\/images\/.*.png";
+		var IE7_BOX_MODEL = true;
+	</script>
+	<script src="<{$xoops_imageurl}>ie7/ie7-standard-p.js" type="text/javascript"></script>
+<![endif]-->	
+
+</head>
+<body  class="<{$xoops_dirname}> theme-default">
+<{if $xoBlocks.canvas_left and $xoBlocks.canvas_right}><{assign var=columns_layout value='threecolumns-layout'}>
+<{elseif $xoBlocks.canvas_left}><{assign var=columns_layout value='leftcolumn-layout'}>
+<{elseif $xoBlocks.canvas_right}><{assign var=columns_layout value='rightcolumn-layout'}>
+<{/if}>
+<div id="xo-canvas"<{if $columns_layout}> class="<{$columns_layout}>"<{/if}>>
+	<div id="xo-canvas-header">
+		<div id="xo-main-logo">
+			<a href="<{xoAppUrl /}>"><img src="<{$xoops_imageurl}>images/logo.png" alt="<{$xoops_sitename}>" /></a>
+		</div>
+	<div id="xo-canvas-globalnav"></div>
+</div >
+		
+	<div id="xo-canvas-content">
+        <div class="redirect">          
+          <div align="center"><{$message}>
+          </div>
+          <p align="center"><{$lang_ifnotreload}></p>
+      </div>
+  <{if $xoops_logdump != ''}><div><{$xoops_logdump}></div><{/if}>
+        </div>
+	<div id="crn-bl"></div>
+	<div id="crn-br"></div>
+		
+	<div id="xo-footer">
+		<div align="center">
+		  <p>&nbsp;</p>
+		  <p><{$xoops_footer}>	
+	      </p>
+	  </div>
+	</div>
+</div>
+</body>
+</html>

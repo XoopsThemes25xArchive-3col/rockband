@@ -1,0 +1,254 @@
+@import url(blocks.css);
+@import url(module_content.css);
+
+html, body {
+	color: #FFF;
+	margin: 0;
+	padding: 0;
+	font: 9pt Arial, Helvetica, sans-serif;
+	background-color: #000;
+	background-image: url(images/bg-gen.gif);
+	background-repeat: repeat-x;
+	background-position: top;
+}
+
+table {
+	width: 100%;
+}
+.date {
+	position: absolute;
+	left: 750px;
+	top: 368px;
+	font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+	font-size: 18px;
+	font-weight: bolder;
+}
+table td {
+	padding: 0;
+	border-width: 0;
+	vertical-align: top;
+}
+
+h1 {font-size: 200%;}
+h2 {font-size: 140%;}
+h3 {font-size: 120%;}
+h4 {font-size: 100%;}
+h5 {font-size: 90%;}
+h6 {font-size: 80%;}
+
+h1, h2, h3, h4, h5, h6 {
+	padding: 0px;
+	margin: 0px;
+}
+
+a {
+	color: #F00;
+	text-decoration: none;
+	font-weight: normal;
+	position: relative;
+}
+a:hover {
+	color: #FFF;
+	text-decoration: none;
+}
+
+img {	border:	0px;}
+
+#xo-canvas {
+	margin:	auto;
+	width: 990px;
+}
+
+/* ---------- Header / banner / globalnavigation ---------- */
+#xo-canvas-header {
+	height: 562px;
+	clear:both;
+	position:relative;
+	z-index: 1000;
+	background-image: url(images/header.jpg);
+	background-repeat: no-repeat;
+}
+
+#xo-canvas-header-top {
+	background: url(images/bg-black-trans.png);
+	height: 110px;
+	position: relative;
+	top: 0;
+	left: 0;
+}
+
+#xo-canvas-header-degrad {
+	background: url(images/gradient-header.png);
+	height: 154px;
+	position: relative;
+	top: 262px;
+	z-index: 1000;
+}
+
+#xo-banner {
+	width: 468px;
+	height: 60px;
+	position: absolute;
+	top: 20px; 
+	right: 0px;
+}
+#rss {
+	position: relative;
+	top: 70px;
+	right: 50px;
+}
+
+#xo-main-logo {
+	float: left;
+	position: absolute;
+	top: 10px;
+	left: 20px;
+}
+
+#xo-canvas-globalnav {
+	clear:both;
+	position: relative;
+	top: 250px;
+}
+
+#xo-canvas-globalnav ul {
+	list-style-type: none;
+	margin: 0px;
+	padding: 0px;
+	background: url(images/bg-navbar.png);
+	height: 26px;
+	padding-top: 10px;
+	border-top-width: 1px;
+	border-bottom-width: 2px;
+	border-top-style: solid;
+	border-bottom-style: solid;
+	border-top-color: #000;
+	border-bottom-color: #000;
+}
+
+#xo-canvas-globalnav li {
+	display: inline;
+}
+
+#xo-canvas-globalnav li a {
+	float: left;
+	padding: 0 10px;
+	text-decoration: none;
+	border-left: 1px solid #FFF;
+	text-align: center;
+	color: #FFF;
+	font-weight: bold;
+	display: block;
+	text-transform: uppercase;
+	font-family: Tahoma, Arial, Helvetica, sans-serif;
+	line-height: 1em;
+	position: relative;
+}
+
+#xo-canvas-globalnav li:first-child a {border: none; }
+
+#xo-canvas-globalnav li a:hover {
+	color: #000;
+}
+
+/* ---------- Content (main) zone ---------- */
+#xo-canvas-content {
+	padding: 12px;
+	line-height: 1.5em;
+	margin-top: -160px;
+	z-index: 8000;
+	position: relative;
+}
+#xo-page {
+	padding: 20px;
+	background: url(images/bg-grey-trans.png);
+}
+
+#xo-content {
+	clear:			both;
+	padding:		.5em;
+	margin:			0px;
+}
+
+/* ---------- column configurations ---------- */
+#xo-canvas-columns {
+	width: 100%;
+}
+#xo-canvas-leftcolumn {
+	width: 220px;
+}
+
+#xo-canvas-rightcolumn {
+	width: 290px;
+}
+
+#xo-canvas-leftcolumn, #xo-page, #xo-canvas-rightcolumn {
+	vertical-align:	top;
+}
+
+#xo-canvas.leftcolumn-layout #xo-canvas-columns, #xo-canvas.threecolumns-layout #xo-canvas-columns {}
+#xo-canvas.rightcolumn-layout #xo-page, #xo-canvas.threecolumns-layout #xo-page {}
+
+/* ---------- Footer ---------- */
+#xo-footer {
+	text-align: center;
+	color: #a7a7a7;
+	padding: 15px;
+}
+#xo-footer a {
+	color: #a7a7a7;
+}
+#xo-footer a:hover {	text-decoration: underline;}
+
+/* ---------- Extra layout / forms---------- */
+blockquote {
+	margin-left:		.5em;
+	background:			#313131;
+	padding:			.5em;
+	border-top: 1px solid #7D0003;
+	border-right: 1px solid #7D0003;
+	border-bottom: 1px solid #7D0003;
+	border-left: 6px solid #7D0003;
+}
+.xoopsCode {
+	background:			#313131;
+	font-family:		monospace;
+	border:				1px solid #7D0003;
+	padding:			.5em;
+	width:				100%;
+	display:			block;
+	overflow: auto;
+}
+
+input[type=submit], input[type=button]  {
+	color: #FFFFFF;
+	border: 1px solid #4F0002;
+	font: bold 90% Geneva, Arial, Helvetica, sans-serif;
+	text-transform: lowercase;
+	background-color: #F00;
+}
+
+select[name=timezone_offset] {
+	font-size:			90%;
+}
+
+input[type=text], input[type=password], textarea {
+	border:				1px solid #666666;
+	margin:				2px 0px;
+	padding:		.25em .5em;
+	position: relative;
+	background: #000;
+	font: 100% Verdana, Arial, Helvetica, sans-serif;
+	color: #FFF;
+}
+
+input[type=text]:focus, input[type=password]:focus, textarea:focus {
+	border-color:		#666;
+	outline:			1px solid #666;
+	background: #000000;
+	color: #FFF;
+}
+
+textarea { width: 95%;}
+
+input { position:relative; }

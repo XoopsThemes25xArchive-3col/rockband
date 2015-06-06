@@ -1,0 +1,11 @@
+
+<{if $xoops_showcblock == 1}>
+	<div class="xo-blockszone x2-secondary" id="xo-page-blocks">
+	<{foreach from=$xoops_ccblocks item=block}>
+		<div class="xo-block <{$block.module}>">
+			<{if $block.title}><div class="xo-blocktitle"><{$block.title}></div><{/if}>
+			<div class="xo-blockcontent"><{$block.content}></div>
+		</div>
+	<{/foreach}>
+	</div>
+<{/if}>
